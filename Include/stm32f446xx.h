@@ -5979,9 +5979,9 @@ typedef struct
 #define DMA_SxCR_CHSEL_Pos       (25U)
 #define DMA_SxCR_CHSEL_Msk       (0x7UL << DMA_SxCR_CHSEL_Pos)                  /*!< 0x0E000000 */
 #define DMA_SxCR_CHSEL           DMA_SxCR_CHSEL_Msk
-#define DMA_SxCR_CHSEL_0         0x02000000U
-#define DMA_SxCR_CHSEL_1         0x04000000U
-#define DMA_SxCR_CHSEL_2         0x08000000U
+#define DMA_SxCR_CHSEL_0         (0x1UL << DMA_SxCR_CHSEL_Pos)                  /*!< 0x02000000 */
+#define DMA_SxCR_CHSEL_1         (0x2UL << DMA_SxCR_CHSEL_Pos)                  /*!< 0x04000000 */
+#define DMA_SxCR_CHSEL_2         (0x4UL << DMA_SxCR_CHSEL_Pos)                  /*!< 0x08000000 */
 #define DMA_SxCR_MBURST_Pos      (23U)
 #define DMA_SxCR_MBURST_Msk      (0x3UL << DMA_SxCR_MBURST_Pos)                 /*!< 0x01800000 */
 #define DMA_SxCR_MBURST          DMA_SxCR_MBURST_Msk
