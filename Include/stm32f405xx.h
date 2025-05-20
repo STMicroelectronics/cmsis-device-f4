@@ -6408,20 +6408,14 @@ typedef struct
 #define FLASH_ACR_DCRST_Pos            (12U)
 #define FLASH_ACR_DCRST_Msk            (0x1UL << FLASH_ACR_DCRST_Pos)               /*!< 0x00001000 */
 #define FLASH_ACR_DCRST                FLASH_ACR_DCRST_Msk
-#define FLASH_ACR_BYTE0_ADDRESS_Pos    (10U)
-#define FLASH_ACR_BYTE0_ADDRESS_Msk    (0x10008FUL << FLASH_ACR_BYTE0_ADDRESS_Pos)  /*!< 0x40023C00 */
-#define FLASH_ACR_BYTE0_ADDRESS        FLASH_ACR_BYTE0_ADDRESS_Msk
-#define FLASH_ACR_BYTE2_ADDRESS_Pos    (0U)
-#define FLASH_ACR_BYTE2_ADDRESS_Msk    (0x40023C03UL << FLASH_ACR_BYTE2_ADDRESS_Pos) /*!< 0x40023C03 */
-#define FLASH_ACR_BYTE2_ADDRESS        FLASH_ACR_BYTE2_ADDRESS_Msk
 
 /*******************  Bits definition for FLASH_SR register  ******************/
 #define FLASH_SR_EOP_Pos               (0U)
 #define FLASH_SR_EOP_Msk               (0x1UL << FLASH_SR_EOP_Pos)                   /*!< 0x00000001 */
 #define FLASH_SR_EOP                   FLASH_SR_EOP_Msk
-#define FLASH_SR_SOP_Pos               (1U)
-#define FLASH_SR_SOP_Msk               (0x1UL << FLASH_SR_SOP_Pos)                   /*!< 0x00000002 */
-#define FLASH_SR_SOP                   FLASH_SR_SOP_Msk
+#define FLASH_SR_OPERR_Pos             (1U)
+#define FLASH_SR_OPERR_Msk             (0x1UL << FLASH_SR_OPERR_Pos)               /*!< 0x00000002 */
+#define FLASH_SR_OPERR                 FLASH_SR_OPERR_Msk
 #define FLASH_SR_WRPERR_Pos            (4U)
 #define FLASH_SR_WRPERR_Msk            (0x1UL << FLASH_SR_WRPERR_Pos)                /*!< 0x00000010 */
 #define FLASH_SR_WRPERR                FLASH_SR_WRPERR_Msk
@@ -6449,13 +6443,12 @@ typedef struct
 #define FLASH_CR_MER_Msk               (0x1UL << FLASH_CR_MER_Pos)                   /*!< 0x00000004 */
 #define FLASH_CR_MER                   FLASH_CR_MER_Msk
 #define FLASH_CR_SNB_Pos               (3U)
-#define FLASH_CR_SNB_Msk               (0x1FUL << FLASH_CR_SNB_Pos)             /*!< 0x000000F8 */
+#define FLASH_CR_SNB_Msk               (0x0FUL << FLASH_CR_SNB_Pos)             /*!< 0x00000078 */
 #define FLASH_CR_SNB                   FLASH_CR_SNB_Msk
 #define FLASH_CR_SNB_0                 (0x01UL << FLASH_CR_SNB_Pos)             /*!< 0x00000008 */
 #define FLASH_CR_SNB_1                 (0x02UL << FLASH_CR_SNB_Pos)             /*!< 0x00000010 */
 #define FLASH_CR_SNB_2                 (0x04UL << FLASH_CR_SNB_Pos)             /*!< 0x00000020 */
 #define FLASH_CR_SNB_3                 (0x08UL << FLASH_CR_SNB_Pos)             /*!< 0x00000040 */
-#define FLASH_CR_SNB_4                 (0x10UL << FLASH_CR_SNB_Pos)             /*!< 0x00000080 */
 #define FLASH_CR_PSIZE_Pos             (8U)
 #define FLASH_CR_PSIZE_Msk             (0x3UL << FLASH_CR_PSIZE_Pos)            /*!< 0x00000300 */
 #define FLASH_CR_PSIZE                 FLASH_CR_PSIZE_Msk
@@ -6539,6 +6532,16 @@ typedef struct
 #define FLASH_OPTCR1_nWRP_9            (0x200UL << FLASH_OPTCR1_nWRP_Pos)       /*!< 0x02000000 */
 #define FLASH_OPTCR1_nWRP_10           (0x400UL << FLASH_OPTCR1_nWRP_Pos)       /*!< 0x04000000 */
 #define FLASH_OPTCR1_nWRP_11           (0x800UL << FLASH_OPTCR1_nWRP_Pos)       /*!< 0x08000000 */
+/* Legacy defines */
+#define FLASH_SR_SOP_Pos    FLASH_SR_OPERR_Pos
+#define FLASH_SR_SOP_Msk    FLASH_SR_OPERR_Msk
+#define FLASH_SR_SOP        FLASH_SR_OPERR
+#define FLASH_ACR_BYTE0_ADDRESS_Pos    (10U)
+#define FLASH_ACR_BYTE0_ADDRESS_Msk    (0x10008FUL << FLASH_ACR_BYTE0_ADDRESS_Pos)  /*!< 0x40023C00 */
+#define FLASH_ACR_BYTE0_ADDRESS        FLASH_ACR_BYTE0_ADDRESS_Msk
+#define FLASH_ACR_BYTE2_ADDRESS_Pos    (0U)
+#define FLASH_ACR_BYTE2_ADDRESS_Msk    (0x40023C03UL << FLASH_ACR_BYTE2_ADDRESS_Pos) /*!< 0x40023C03 */
+#define FLASH_ACR_BYTE2_ADDRESS        FLASH_ACR_BYTE2_ADDRESS_Msk
 
 /******************************************************************************/
 /*                                                                            */
@@ -12810,9 +12813,9 @@ typedef struct
 #define USB_OTG_DIEPMSK_TXFURM_Pos               (8U)
 #define USB_OTG_DIEPMSK_TXFURM_Msk               (0x1UL << USB_OTG_DIEPMSK_TXFURM_Pos) /*!< 0x00000100 */
 #define USB_OTG_DIEPMSK_TXFURM                   USB_OTG_DIEPMSK_TXFURM_Msk    /*!< FIFO underrun mask                                */
-#define USB_OTG_DIEPMSK_BIM_Pos                  (9U)
-#define USB_OTG_DIEPMSK_BIM_Msk                  (0x1UL << USB_OTG_DIEPMSK_BIM_Pos) /*!< 0x00000200 */
-#define USB_OTG_DIEPMSK_BIM                      USB_OTG_DIEPMSK_BIM_Msk       /*!< BNA interrupt mask                                */
+#define USB_OTG_DIEPMSK_NAKM_Pos                 (13U)
+#define USB_OTG_DIEPMSK_NAKM_Msk                 (0x1UL << USB_OTG_DIEPMSK_NAKM_Pos) /*!< 0x00002000 */
+#define USB_OTG_DIEPMSK_NAKM                     USB_OTG_DIEPMSK_NAKM_Msk       /*!< NAK interrupt mask                                */
 
 /********************  Bit definition for USB_OTG_HPTXSTS register  ********************/
 #define USB_OTG_HPTXSTS_PTXFSAVL_Pos             (0U)
