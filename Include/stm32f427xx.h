@@ -155,13 +155,13 @@ typedef enum
   DCMI_IRQn                   = 78,     /*!< DCMI global interrupt                                             */
   HASH_RNG_IRQn               = 80,     /*!< Hash and Rng global interrupt                                     */
   FPU_IRQn                    = 81,     /*!< FPU global interrupt                                              */
-                                UART7_IRQn                  = 82,     /*!< UART7 global interrupt                                            */
-                                UART8_IRQn                  = 83,     /*!< UART8 global interrupt                                            */
-                                SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */
-                                                              SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
-                                                                  SPI6_IRQn                   = 86,     /*!< SPI6 global Interrupt                                             */
-                                                                  SAI1_IRQn                   = 87,     /*!< SAI1 global Interrupt                                             */
-                                                                  DMA2D_IRQn                  = 90      /*!< DMA2D global Interrupt                                            */
+  UART7_IRQn                  = 82,     /*!< UART7 global interrupt                                            */
+  UART8_IRQn                  = 83,     /*!< UART8 global interrupt                                            */
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */
+  SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
+  SPI6_IRQn                   = 86,     /*!< SPI6 global Interrupt                                             */
+  SAI1_IRQn                   = 87,     /*!< SAI1 global Interrupt                                             */
+  DMA2D_IRQn                  = 90      /*!< DMA2D global Interrupt                                            */
 } IRQn_Type;
 
 /**

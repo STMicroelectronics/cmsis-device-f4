@@ -95,7 +95,7 @@ typedef enum
   ADC_IRQn                    = 18,     /*!< ADC1 global Interrupts                                            */
   EXTI9_5_IRQn                = 23,     /*!< External Line[9:5] Interrupts                                     */
   TIM1_BRK_TIM9_IRQn          = 24,     /*!< TIM1 Break interrupt and TIM9 global interrupt                    */
-  TIM1_UP_IRQn                = 25,     /*!< TIM1 Update Interrupt                                            */
+  TIM1_UP_IRQn                = 25,     /*!< TIM1 Update Interrupt                                             */
   TIM1_TRG_COM_TIM11_IRQn     = 26,     /*!< TIM1 Trigger and Commutation Interrupt and TIM11 global interrupt */
   TIM1_CC_IRQn                = 27,     /*!< TIM1 Capture Compare Interrupt                                    */
   I2C1_EV_IRQn                = 31,     /*!< I2C1 Event Interrupt                                              */
@@ -122,10 +122,10 @@ typedef enum
   USART6_IRQn                 = 71,     /*!< USART6 global interrupt                                           */
   RNG_IRQn                    = 80,     /*!< RNG global Interrupt                                              */
   FPU_IRQn                    = 81,     /*!< FPU global interrupt                                              */
-                                                              SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
-                                                                  FMPI2C1_EV_IRQn             = 95,     /*!< FMPI2C1 Event Interrupt                                           */
-                                                                  FMPI2C1_ER_IRQn             = 96,     /*!< FMPI2C1 Error Interrupt                                           */
-                                                                  LPTIM1_IRQn                 = 97      /*!< LPTIM1 interrupt                                                  */
+  SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
+  FMPI2C1_EV_IRQn             = 95,     /*!< FMPI2C1 Event Interrupt                                           */
+  FMPI2C1_ER_IRQn             = 96,     /*!< FMPI2C1 Error Interrupt                                           */
+  LPTIM1_IRQn                 = 97      /*!< LPTIM1 interrupt                                                  */
 } IRQn_Type;
 
 /**

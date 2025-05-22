@@ -153,21 +153,21 @@ typedef enum
   CAN3_SCE_IRQn               = 77,     /*!< CAN3 SCE Interrupt                                                */
   RNG_IRQn                    = 80,     /*!< RNG global Interrupt                                              */
   FPU_IRQn                    = 81,     /*!< FPU global interrupt                                              */
-                                UART7_IRQn                  = 82,     /*!< UART7 global interrupt                                            */
-                                UART8_IRQn                  = 83,     /*!< UART8 global interrupt                                            */
-                                SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */
-                                                              SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
-                                                                  SAI1_IRQn                   = 87,     /*!< SAI1 global Interrupt                                             */
-                                                                  UART9_IRQn                  = 88,     /*!< UART9 global Interrupt                                            */
-                                                                  UART10_IRQn                 = 89,     /*!< UART10 global Interrupt                                           */
-                                                                  QUADSPI_IRQn                = 92,     /*!< QuadSPI global Interrupt                                          */
-                                                                  FMPI2C1_EV_IRQn             = 95,     /*!< FMPI2C1 Event Interrupt                                           */
-                                                                  FMPI2C1_ER_IRQn             = 96,     /*!< FMPI2C1 Error Interrupt                                           */
-                                                                  LPTIM1_IRQn                 = 97,     /*!< LP TIM1 interrupt                                                 */
-                                                                  DFSDM2_FLT0_IRQn            = 98,     /*!< DFSDM2 Filter 0 global Interrupt                                  */
-                                                                  DFSDM2_FLT1_IRQn            = 99,     /*!< DFSDM2 Filter 1 global Interrupt                                  */
-                                                                  DFSDM2_FLT2_IRQn            = 100,    /*!< DFSDM2 Filter 2 global Interrupt                                  */
-                                                                  DFSDM2_FLT3_IRQn            = 101     /*!< DFSDM2 Filter 3 global Interrupt                                  */
+  UART7_IRQn                  = 82,     /*!< UART7 global interrupt                                            */
+  UART8_IRQn                  = 83,     /*!< UART8 global interrupt                                            */
+  SPI4_IRQn                   = 84,     /*!< SPI4 global Interrupt                                             */
+  SPI5_IRQn                   = 85,     /*!< SPI5 global Interrupt                                             */
+  SAI1_IRQn                   = 87,     /*!< SAI1 global Interrupt                                             */
+  UART9_IRQn                  = 88,     /*!< UART9 global Interrupt                                            */
+  UART10_IRQn                 = 89,     /*!< UART10 global Interrupt                                           */
+  QUADSPI_IRQn                = 92,     /*!< QuadSPI global Interrupt                                          */
+  FMPI2C1_EV_IRQn             = 95,     /*!< FMPI2C1 Event Interrupt                                           */
+  FMPI2C1_ER_IRQn             = 96,     /*!< FMPI2C1 Error Interrupt                                           */
+  LPTIM1_IRQn                 = 97,     /*!< LP TIM1 interrupt                                                 */
+  DFSDM2_FLT0_IRQn            = 98,     /*!< DFSDM2 Filter 0 global Interrupt                                  */
+  DFSDM2_FLT1_IRQn            = 99,     /*!< DFSDM2 Filter 1 global Interrupt                                  */
+  DFSDM2_FLT2_IRQn            = 100,    /*!< DFSDM2 Filter 2 global Interrupt                                  */
+  DFSDM2_FLT3_IRQn            = 101     /*!< DFSDM2 Filter 3 global Interrupt                                  */
 } IRQn_Type;
 
 /**

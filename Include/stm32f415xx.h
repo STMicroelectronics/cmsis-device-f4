@@ -152,7 +152,7 @@ typedef enum
   OTG_HS_IRQn                 = 77,     /*!< USB OTG HS global interrupt                                       */
   CRYP_IRQn                   = 79,     /*!< CRYP crypto global interrupt                                      */
   HASH_RNG_IRQn               = 80,     /*!< Hash and Rng global interrupt                                     */
-  FPU_IRQn                    = 81      /*!< FPU global interrupt                                               */
+  FPU_IRQn                    = 81      /*!< FPU global interrupt                                              */
 } IRQn_Type;
 
 /**
