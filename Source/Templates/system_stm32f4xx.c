@@ -89,13 +89,13 @@
 /* Note: Following vector table addresses must be defined in line with linker
          configuration. */
 /*!< Uncomment the following line if you need to relocate the vector table
-     anywhere in Flash or Sram, else the vector table is kept at the automatic
-     remap of boot address selected */
+     anywhere in Flash or SRAM, else it will be located at the base address
+     of the Flash. */
 /* #define USER_VECT_TAB_ADDRESS */
 
 #if defined(USER_VECT_TAB_ADDRESS)
 /*!< Uncomment the following line if you need to relocate your vector Table
-     in Sram else user remap will be done in Flash. */
+     in SRAM else user remap will be done in Flash. */
 /* #define VECT_TAB_SRAM */
 #if defined(VECT_TAB_SRAM)
 #define VECT_TAB_BASE_ADDRESS   SRAM_BASE       /*!< Vector Table base address field.
@@ -177,7 +177,9 @@ void SystemInit(void)
 
   /* Configure the Vector Table location -------------------------------------*/
 #if defined(USER_VECT_TAB_ADDRESS)
-  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
+  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal Flash or SRAM */
+#else
+  SCB->VTOR = FLASH_BASE; /* Default Vector Table Location at the base address of Internal Flash */
 #endif /* USER_VECT_TAB_ADDRESS */
 }
 
