@@ -11685,7 +11685,7 @@ typedef struct
 #define SYSCFG_CMPCR_READY_Pos               (8U)
 #define SYSCFG_CMPCR_READY_Msk               (0x1UL << SYSCFG_CMPCR_READY_Pos)  /*!< 0x00000100 */
 #define SYSCFG_CMPCR_READY                   SYSCFG_CMPCR_READY_Msk            /*!<Compensation cell power-down */
-/******************  Bit definition for SYSCFG_CFGR register  ****************/
+/******************  Bit definition for SYSCFG_CFGR register  *****************/
 #define SYSCFG_CFGR_FMPI2C1_SCL_Pos          (0U)
 #define SYSCFG_CFGR_FMPI2C1_SCL_Msk          (0x1UL << SYSCFG_CFGR_FMPI2C1_SCL_Pos) /*!< 0x00000001 */
 #define SYSCFG_CFGR_FMPI2C1_SCL              SYSCFG_CFGR_FMPI2C1_SCL_Msk       /*!<FM+ drive capability for FMPI2C1_SCL pin */
@@ -11693,6 +11693,13 @@ typedef struct
 #define SYSCFG_CFGR_FMPI2C1_SDA_Msk          (0x1UL << SYSCFG_CFGR_FMPI2C1_SDA_Pos) /*!< 0x00000002 */
 #define SYSCFG_CFGR_FMPI2C1_SDA              SYSCFG_CFGR_FMPI2C1_SDA_Msk       /*!<FM+ drive capability for FMPI2C1_SDA pin */
 
+/******************  Bit definition for SYSCFG_CFGR2 register  *****************/
+#define SYSCFG_CFGR2_LOCKUP_LOCK_Pos         (0U)
+#define SYSCFG_CFGR2_LOCKUP_LOCK_Msk         (0x1UL << SYSCFG_CFGR2_LOCKUP_LOCK_Pos) /*!< 0x00000001 */
+#define SYSCFG_CFGR2_LOCKUP_LOCK             SYSCFG_CFGR2_LOCKUP_LOCK_Msk      /*!<Core Lockup lock */
+#define SYSCFG_CFGR2_PVD_LOCK_Pos            (2U)
+#define SYSCFG_CFGR2_PVD_LOCK_Msk            (0x1UL << SYSCFG_CFGR2_PVD_LOCK_Pos) /*!< 0x00000004 */
+#define SYSCFG_CFGR2_PVD_LOCK                SYSCFG_CFGR2_PVD_LOCK_Msk         /*!<PVD Lock         */
 
 /******************************************************************************/
 /*                                                                            */
