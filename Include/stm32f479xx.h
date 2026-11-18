@@ -1194,7 +1194,10 @@ typedef struct
 #define SRAM3_BB_BASE         0x22600000UL /*!< SRAM3(64 KB) base address in the bit-band region                           */
 #define PERIPH_BB_BASE        0x42000000UL /*!< Peripheral base address in the bit-band region                             */
 #define BKPSRAM_BB_BASE       0x42480000UL /*!< Backup SRAM(4 KB) base address in the bit-band region                      */
-#define FLASH_END             0x081FFFFFUL /*!< FLASH end address                                                          */
+#define FLASH_END             0x081FFFFFUL /*!< FLASH end address                                                         */
+#define FLASH_SIZE            ((((*((uint16_t *)FLASHSIZE_BASE)) == 0xFFFFU)) ? 0x200000U : \
+                              ((((*((uint16_t *)FLASHSIZE_BASE)) == 0x0000U)) ? 0x200000U : \
+                              (((uint32_t)(*((uint16_t *)FLASHSIZE_BASE)) & (0xFFFFU)) << 10U)))
 #define FLASH_OTP_BASE        0x1FFF7800UL /*!< Base address of : (up to 528 Bytes) embedded FLASH OTP Area                */
 #define FLASH_OTP_END         0x1FFF7A0FUL /*!< End address of : (up to 528 Bytes) embedded FLASH OTP Area                 */
 #define CCMDATARAM_END        0x1000FFFFUL /*!< CCM data RAM end address                                                   */
